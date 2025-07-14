@@ -1,0 +1,130 @@
+/* --- style.css --- */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Variabel Warna untuk Dark Mode */
+:root {
+    --primary-color: #00A9FF; /* Biru cerah untuk aksen utama */
+    --secondary-color: #CDF5FD; /* Biru muda untuk teks aksen */
+    --background-color: #0F172A; /* Biru dongker gelap untuk background */
+    --surface-color: #1E293B; /* Warna permukaan untuk card, form, dll */
+    --text-primary: #E2E8F0; /* Warna teks utama (putih keabu-abuan) */
+    --text-secondary: #94A3B8; /* Warna teks sekunder (abu-abu) */
+    --border-color: #334155; /* Warna border */
+}
+
+/* Global Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    background-color: var(--background-color);
+}
+
+/* Main Container */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+}
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+    background-color: var(--surface-color);
+    border-right: 1px solid var(--border-color);
+}
+
+[data-testid="stSidebar"] .st-emotion-cache-16txtl3 {
+    padding-top: 1.5rem;
+}
+
+/* Tombol Navigasi di Sidebar */
+[data-testid="stRadio"] > label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    padding-bottom: 1rem;
+}
+
+[data-testid="stRadio"] > div {
+    gap: 0.5rem;
+}
+
+[data-testid="stRadio"] p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Menghilangkan footer bawaan Streamlit */
+footer {
+    visibility: hidden;
+}
+
+#MainMenu {
+    visibility: hidden;
+}
+
+/* Styling untuk Card Info */
+.info-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.info-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 20px rgba(0, 169, 255, 0.1);
+}
+
+/* Styling untuk Form Input */
+[data-testid="stForm"] {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* Styling untuk Tombol Utama */
+.stButton > button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.stButton > button:hover {
+    background-color: #0095E0;
+    transform: translateY(-2px);
+}
+
+.stButton > button:active {
+    transform: translateY(0);
+}
+
+/* Styling untuk Metric/KPI */
+[data-testid="stMetric"] {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+[data-testid="stMetric"] > label {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+[data-testid="stMetric"] > div {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
